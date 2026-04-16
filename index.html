@@ -16,7 +16,8 @@ a{color:#E8600A;text-decoration:none}a:hover{text-decoration:underline}
 img{max-width:100%;height:auto}
 
 /* Animations */
-.animate-in{opacity:0;transform:translateY(30px);transition:opacity .6s ease,transform .6s ease}
+.animate-in{opacity:1;transform:translateY(0);transition:opacity .6s ease,transform .6s ease}
+.animate-in.pending{opacity:0;transform:translateY(30px)}
 .animate-in.visible{opacity:1;transform:translateY(0)}
 .card{transition:transform .3s ease,box-shadow .3s ease}
 .card:hover{transform:translateY(-6px);box-shadow:0 12px 40px rgba(0,0,0,.3)}
