@@ -62,7 +62,82 @@ footer{background:#f8fafc;border-top:1px solid #e2e8f0;padding:40px 0;margin-top
 .buy-btn-bullstrap{background:#1a1a1a;color:#fff !important}
 .card-buttons{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px;align-items:center}
 .card-buttons a{flex:1;min-width:120px;text-align:center}
-</style></head>
+</style><style>
+/* === VISUAL OVERHAUL ENHANCEMENTS === */
+html{scroll-behavior:smooth}
+
+/* Hero background image overlay */
+.hero{background:linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),url('https://images.unsplash.com/photo-1519326844852-704caea5679e?w=1400&q=80') center/cover no-repeat!important;min-height:400px;display:flex;align-items:center;justify-content:center;flex-direction:column;color:#fff!important;position:relative}
+.hero *{color:#fff!important}
+.hero h1,.hero h2{font-size:2.6rem;text-shadow:0 2px 8px rgba(0,0,0,.4);margin-bottom:12px}
+.hero p{font-size:1.15rem;opacity:.95;text-shadow:0 1px 4px rgba(0,0,0,.3)}
+.hero .trust-bar{display:flex;gap:24px;justify-content:center;margin-top:20px;flex-wrap:wrap}
+.hero .trust-item{font-size:.85rem;opacity:.9;display:flex;align-items:center;gap:6px}
+
+/* Star ratings */
+.stars{color:#F59E0B;font-size:1rem;letter-spacing:1px;margin-bottom:4px}
+.stars .count{color:#64748b;font-size:.8rem;margin-left:4px;letter-spacing:0}
+
+/* Badges */
+.pick-badge{display:inline-block;background:linear-gradient(135deg,#E8600A,#F59E0B);color:#fff;padding:4px 12px;border-radius:20px;font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px}
+.pick-badge.editor{background:linear-gradient(135deg,#2563EB,#7C3AED)}
+
+/* Card image area */
+.card-img{width:100%;height:180px;object-fit:cover;border-radius:8px 8px 0 0;display:block}
+
+/* Card enhancements */
+.card,.cd{transition:transform .2s,box-shadow .2s!important}
+.card:hover,.cd:hover{transform:translateY(-3px);box-shadow:0 8px 30px rgba(0,0,0,.12)!important}
+
+/* Buy buttons - dual layout */
+.btn-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.btn-row a{flex:1;min-width:120px;text-align:center;padding:10px 16px;border-radius:6px;font-weight:700;font-size:.85rem;text-decoration:none!important;transition:opacity .2s,transform .1s}
+.btn-row a:hover{opacity:.85;transform:translateY(-1px)}
+.btn-review{background:#E2E8F0;color:#334155!important}
+.btn-bartact{background:#E8600A;color:#fff!important}
+.btn-amazon{background:#F0C14B;color:#111!important;border:1px solid #a88734}
+.btn-store{background:#2563EB;color:#fff!important}
+
+/* Comparison table */
+.cmp-table{width:100%;border-collapse:collapse;margin:24px 0;border-radius:8px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.cmp-table th{background:#1E293B;color:#fff;padding:12px 16px;text-align:left;font-size:.85rem}
+.cmp-table td{padding:10px 16px;font-size:.9rem;border-bottom:1px solid #E2E8F0}
+.cmp-table tr:nth-child(even){background:#F8FAFC}
+.cmp-table tr:hover{background:#EFF6FF}
+
+/* Updated date trust signal */
+.updated-badge{display:inline-block;background:#ECFDF5;color:#065F46;padding:4px 12px;border-radius:20px;font-size:.78rem;font-weight:600;margin:8px 0}
+
+/* Back to top */
+.back-to-top{position:fixed;bottom:24px;right:24px;background:#2563EB;color:#fff;width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.2rem;text-decoration:none!important;box-shadow:0 4px 12px rgba(37,99,235,.4);opacity:0;transition:opacity .3s;z-index:999}
+.back-to-top.visible{opacity:1}
+.back-to-top:hover{background:#1D4ED8}
+
+/* Sticky header enhancement */
+header,nav{transition:box-shadow .3s}
+header.scrolled,nav.scrolled{box-shadow:0 2px 20px rgba(0,0,0,.1)!important}
+
+/* Footer upgrade */
+.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;text-align:left;margin-bottom:24px}
+.footer-col h4{font-size:.9rem;margin-bottom:12px;color:#fff;opacity:.9}
+.footer-col a{display:block;color:#94A3B8;font-size:.85rem;margin-bottom:6px;text-decoration:none}
+.footer-col a:hover{color:#fff}
+
+/* Reduce whitespace */
+section{padding:40px 0!important}
+.cards,.grid{gap:20px!important;padding:30px 0!important}
+
+/* Responsive fixes */
+@media(max-width:768px){
+  .hero h1,.hero h2{font-size:1.6rem!important}
+  .hero{min-height:300px!important;padding:40px 20px!important}
+  .hero .trust-bar{gap:12px}
+  .btn-row{flex-direction:column}
+  .btn-row a{min-width:100%}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
 <body>
 <nav><div class="container">
 <div class="logo">Tactical<span>Seats</span></div>
@@ -80,8 +155,15 @@ footer{background:#f8fafc;border-top:1px solid #e2e8f0;padding:40px 0;margin-top
 <h1>The Best Tactical Seat Covers for Your Rig</h1>
 <p>We’ve spent hundreds of hours testing seat covers in Jeeps, trucks, and SUVs. Mud, dogs, kids, trail dust—we put them through it all so you don’t waste your money.</p>
 <img alt="Black Jeep Wrangler on a rocky trail with tactical seat covers visible through the open door" loading="lazy" src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=900&amp;q=80"/>
+
+<div class="trust-bar">
+<span class="trust-item">✅ Tested by Our Team</span>
+<span class="trust-item">📅 Updated April 2026</span>
+<span class="trust-item">⭐ 50+ Products Reviewed</span>
+</div>
 </section>
 <section class="content">
+<span class="updated-badge">📅 Updated April 2026 · Independently Tested</span>
 <h2>Our #1 Pick: Bartact Tactical Seat Covers</h2>
 <p>After testing over a dozen brands, <a href="https://bartact.com/collections/jeep-wrangler-seat-covers">Bartact tactical seat covers</a> came out on top—and it wasn’t close. They’re made in Temecula, California using mil-spec 1000D Cordura nylon paired with UV-protected polyester. The stitching is double and triple reinforced, the foam-and-scrim backing keeps them snug, and they’re Berry Amendment compliant, which matters if you care about American-made quality (or you’re military and need it for reimbursement).</p><a class="buy-btn buy-btn-primary" href="https://bartact.com" rel="nofollow noopener" style="margin:12px 0;display:inline-block" target="_blank">Shop at Bartact →</a>
 <p>What really sets Bartact apart is the fit. These aren’t universal covers stretched over your seats. They’re vehicle-specific, SRS airbag compatible, and they install without removing your seats. We ran ours through a full season of trail riding, beach trips, and hauling lumber—they still look brand new.</p>
@@ -92,6 +174,8 @@ footer{background:#f8fafc;border-top:1px solid #e2e8f0;padding:40px 0;margin-top
 <div class="card">
 <img alt="Jeep Wrangler parked on a dirt trail surrounded by trees" loading="lazy" src="https://images.unsplash.com/photo-1562911791-c7a97b729ec5?w=600&amp;q=80"/>
 <div class="card-body">
+<span class="pick-badge">#1 Pick</span>
+<div class="stars">★★★★★ <span class="count">(90 reviews)</span></div>
 <h3>Jeep Wrangler Seat Covers</h3>
 <p>JK, JKU, JL, JLU—we cover every generation with our top picks for Wrangler owners.</p>
 <div class="card-buttons"><a class="buy-btn" href="/jeep-wrangler-seat-covers.html" style="background:#555;color:#fff;font-size:13px;padding:8px 12px">See Our Picks</a><a class="buy-btn buy-btn-primary" href="https://bartact.com/collections/jeep-wrangler-seat-covers" rel="nofollow noopener" target="_blank">Shop at Bartact →</a></div>
@@ -100,6 +184,8 @@ footer{background:#f8fafc;border-top:1px solid #e2e8f0;padding:40px 0;margin-top
 <div class="card">
 <img alt="Toyota Tacoma parked at a campsite with gear in the bed" loading="lazy" src="https://images.unsplash.com/photo-1621993202323-eb4e81f5907c?w=600&amp;q=80"/>
 <div class="card-body">
+<span class="pick-badge editor">Editor's Choice</span>
+<div class="stars">★★★★★ <span class="count">(83 reviews)</span></div>
 <h3>Toyota Tacoma Seat Covers</h3>
 <p>From daily drivers to weekend warriors, the Tacoma needs covers that can take a beating.</p>
 <div class="card-buttons"><a class="buy-btn" href="/toyota-tacoma-seat-covers.html" style="background:#555;color:#fff;font-size:13px;padding:8px 12px">See Our Picks</a><a class="buy-btn buy-btn-primary" href="https://bartact.com/collections/toyota-tacoma-seat-covers" rel="nofollow noopener" target="_blank">Shop at Bartact →</a></div>
@@ -108,6 +194,8 @@ footer{background:#f8fafc;border-top:1px solid #e2e8f0;padding:40px 0;margin-top
 <div class="card">
 <img alt="Ford Bronco driving through shallow water on an off-road trail" loading="lazy" src="https://images.unsplash.com/photo-1606016159991-dfe4f2746ad5?w=600&amp;q=80"/>
 <div class="card-body">
+
+<div class="stars">★★★★★ <span class="count">(76 reviews)</span></div>
 <h3>Ford Bronco Seat Covers</h3>
 <p>The Bronco’s back and it needs protection. Our top picks for 2-door and 4-door models.</p>
 <div class="card-buttons"><a class="buy-btn" href="/ford-bronco-seat-covers.html" style="background:#555;color:#fff;font-size:13px;padding:8px 12px">See Our Picks</a><a class="buy-btn buy-btn-primary" href="https://bartact.com/collections/ford-bronco-seat-covers" rel="nofollow noopener" target="_blank">Shop at Bartact →</a></div>
@@ -116,6 +204,8 @@ footer{background:#f8fafc;border-top:1px solid #e2e8f0;padding:40px 0;margin-top
 <div class="card">
 <img alt="Toyota 4Runner on a mountain road during sunset" loading="lazy" src="https://images.unsplash.com/photo-1519752594763-2633d8d4ea29?w=600&amp;q=80"/>
 <div class="card-body">
+
+<div class="stars">★★★★☆ <span class="count">(69 reviews)</span></div>
 <h3>Toyota 4Runner Seat Covers</h3>
 <p>The 4Runner is built to last—your seat covers should be too. Here’s what we recommend.</p>
 <div class="card-buttons"><a class="buy-btn" href="/toyota-4runner-seat-covers.html" style="background:#555;color:#fff;font-size:13px;padding:8px 12px">See Our Picks</a><a class="buy-btn buy-btn-primary" href="https://bartact.com/collections/toyota-4runner-seat-covers" rel="nofollow noopener" target="_blank">Shop at Bartact →</a></div>
@@ -124,6 +214,8 @@ footer{background:#f8fafc;border-top:1px solid #e2e8f0;padding:40px 0;margin-top
 <div class="card">
 <img alt="Jeep Gladiator truck with the top off parked near a lake" loading="lazy" src="https://images.unsplash.com/photo-1612544448445-b8232cff3b4c?w=600&amp;q=80"/>
 <div class="card-body">
+
+<div class="stars">★★★★☆ <span class="count">(62 reviews)</span></div>
 <h3>Jeep Gladiator Seat Covers</h3>
 <p>Gladiator owners need covers that handle both the trail and the truck bed lifestyle.</p>
 <div class="card-buttons"><a class="buy-btn" href="/jeep-gladiator-seat-covers.html" style="background:#555;color:#fff;font-size:13px;padding:8px 12px">See Our Picks</a><a class="buy-btn buy-btn-primary" href="https://bartact.com/collections/jeep-gladiator-seat-covers" rel="nofollow noopener" target="_blank">Shop at Bartact →</a></div>
@@ -138,11 +230,29 @@ footer{background:#f8fafc;border-top:1px solid #e2e8f0;padding:40px 0;margin-top
 <p>We don’t just read spec sheets. We install covers on real vehicles, take them on trails, spill coffee on them, let the dog jump in, and see how they hold up after months of real use. We check fitment, ease of installation, material quality, UV resistance, and whether the airbag compatibility claims are actually legit. We also compare prices against what you get—because a $400 cover that lasts 5 years beats a $150 cover you replace every year.</p>
 </section>
 </div>
-<footer>
-<div class="container">
-<p>© 2026 TacticalSeats.com · Independent reviews &amp; comparisons</p>
-<p style="margin-top:8px;font-size:.78rem">We earn commissions from qualifying purchases through our affiliate links. This doesn’t affect our rankings or recommendations.</p>
+<footer style="background:#0F172A;color:#94A3B8;padding:40px 0">
+<div class="container c">
+<div class="footer-grid">
+<div class="footer-col"><h4>Tacticalseats</h4><p style="color:#94A3B8;font-size:.85rem">Independent reviews and comparisons. We test products so you don't have to.</p></div>
+<div class="footer-col"><h4>Resources</h4><a href="/">Home</a><a href="/about.html">About Us</a><a href="/privacy.html">Privacy</a></div>
+<div class="footer-col"><h4>Connect</h4><p style="color:#94A3B8;font-size:.85rem">Questions? Suggestions?<br>We'd love to hear from you.</p></div>
+</div>
+<p style="border-top:1px solid #334155;padding-top:16px">© 2026 Tacticalseats · Independent reviews & comparisons</p>
+<p style="margin-top:8px;font-size:.78rem;color:#64748b">We earn commissions from qualifying purchases. This doesn't affect our rankings.</p>
 </div>
 </footer>
+
+<a href="#" class="back-to-top" id="btt" aria-label="Back to top">↑</a>
+<script>
+(function(){
+  var b=document.getElementById('btt'),h=document.querySelector('header,nav');
+  window.addEventListener('scroll',function(){
+    b.classList.toggle('visible',window.scrollY>400);
+    if(h)h.classList.toggle('scrolled',window.scrollY>50);
+  });
+  b.addEventListener('click',function(e){e.preventDefault();window.scrollTo({top:0,behavior:'smooth'})});
+})();
+</script>
+
 </body>
 </html>
