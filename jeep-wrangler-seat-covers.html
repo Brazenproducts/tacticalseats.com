@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#1a1a1a;color:#e0e0e0;line-height:1.6}h1,h2,h3,h4{font-family:'Barlow Condensed',sans-serif;letter-spacing:.5px}a{color:#E8600A;text-decoration:none}a:hover{text-decoration:underline}
-.animate-in{opacity:0;transform:translateY(30px);transition:opacity .6s ease,transform .6s ease}.animate-in.visible{opacity:1;transform:translateY(0)}.card{transition:transform .3s ease,box-shadow .3s ease}.card:hover{transform:translateY(-6px);box-shadow:0 12px 40px rgba(0,0,0,.3)}.buy-btn{transition:transform .3s ease,box-shadow .3s ease}.buy-btn:hover{transform:translateY(-2px)}.btn-bartact:hover{box-shadow:0 4px 15px rgba(232,96,10,.4)}.btn-amazon:hover{box-shadow:0 4px 15px rgba(240,193,75,.4)}.btn-review:hover{box-shadow:0 4px 15px rgba(37,99,235,.4)}tr{transition:background .2s}table tr:hover{background:rgba(255,255,255,.05)}.stars:hover{filter:brightness(1.2);transition:filter .3s}
+.card{transition:transform .3s ease,box-shadow .3s ease}.card:hover{transform:translateY(-6px);box-shadow:0 12px 40px rgba(0,0,0,.3)}.buy-btn{transition:transform .3s ease,box-shadow .3s ease}.buy-btn:hover{transform:translateY(-2px)}.btn-bartact:hover{box-shadow:0 4px 15px rgba(232,96,10,.4)}.btn-amazon:hover{box-shadow:0 4px 15px rgba(240,193,75,.4)}.btn-review:hover{box-shadow:0 4px 15px rgba(37,99,235,.4)}tr{transition:background .2s}table tr:hover{background:rgba(255,255,255,.05)}.stars:hover{filter:brightness(1.2);transition:filter .3s}
 nav{background:#111;padding:14px 20px;position:sticky;top:0;z-index:100;border-bottom:1px solid #333}nav .inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}nav .logo{font-family:'Barlow Condensed',sans-serif;font-size:1.4rem;color:#E8600A;font-weight:700}nav ul{list-style:none;display:flex;gap:24px}nav ul li a{color:#ccc;font-size:.9rem;font-weight:500}nav ul li a:hover{color:#E8600A;text-decoration:none}
 .hero{background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url('images/hero.png') center/cover;padding:80px 20px;min-height:400px;display:flex;align-items:center}.hero-inner{max-width:1200px;margin:0 auto;width:100%}.hero h1{font-size:2.6rem;color:#fff;animation:slideIn .8s ease forwards}.hero p{font-size:1.1rem;color:#ccc;animation:fadeIn 1s ease .3s forwards;opacity:0;margin-top:12px;max-width:700px}.hero .badge{display:inline-block;background:#E8600A;color:#fff;font-size:.85rem;font-weight:600;padding:6px 14px;border-radius:4px;margin-bottom:12px;animation:fadeIn .6s ease forwards;opacity:0}
 @keyframes slideIn{from{opacity:0;transform:translateX(-30px)}to{opacity:1;transform:translateX(0)}}@keyframes fadeIn{from{opacity:0}to{opacity:1}}
@@ -35,19 +35,18 @@ footer{background:#111;padding:50px 20px 24px;margin-top:60px;border-top:1px sol
 </section>
 
 <section class="section">
-<div class="review-card animate-in" style="border-left-color:#E8600A;position:relative">
+<div class="review-card" style="border-left-color:#E8600A;position:relative">
 <span class="pick-badge-inline" style="position:absolute;top:16px;right:16px">🏆 #1 PICK</span>
 <h3>🚙 Bartact Tactical Seat Covers</h3>
 <div class="stars">★★★★★ <span style="color:#999;font-size:.85rem">4.9/5</span></div>
-<p>Custom-fit 1000D mil-spec Cordura for the Jeep Wrangler. Full MOLLE panel integration on front and rear seats. SRS airbag compatible. Made in the USA. See bartact.com for warranty details.</p>
-<p style="color:#999;font-size:.85rem"><strong style="color:#ccc">Best for:</strong> Trail runners, overlanders, and anyone who wants the toughest cover available. <strong style="color:#ccc">Material:</strong> 1000D Cordura Nylon. <strong style="color:#ccc">Colors:</strong> 14 combinations including ACU, MultiCam, and solid tactical colors.</p>
+<p>Custom-fit 1000D mil-spec Cordura for the Jeep Wrangler. Full MOLLE panel integration on supported configurations. SRS airbag compatible. Made in the USA.</p>
+<p style="color:#999;font-size:.85rem"><strong style="color:#ccc">Best for:</strong> Trail runners, overlanders, and anyone who wants the toughest cover available. <strong style="color:#ccc">Material:</strong> 1000D Cordura Nylon.</p>
 <div class="btn-row">
 <a href="https://bartact.com/collections/jeep-wrangler-seat-covers" target="_blank" class="buy-btn btn-bartact">Shop Bartact →</a>
-<a href="#comparison" class="buy-btn btn-review">See Comparison</a>
 </div>
 </div>
 
-<div class="review-card animate-in" style="border-left-color:#666">
+<div class="review-card" style="border-left-color:#666">
 <h3>🚙 Coverking Tactical Seat Covers</h3>
 <div class="stars">★★★★☆ <span style="color:#999;font-size:.85rem">3.8/5</span></div>
 <p>Decent custom-fit option using Ballistic Nylon. Lacks MOLLE integration which is a dealbreaker for serious tactical builds. Airbag compatible. Made overseas.</p>
@@ -57,20 +56,20 @@ footer{background:#111;padding:50px 20px 24px;margin-top:60px;border-top:1px sol
 </div>
 </div>
 
-<div class="review-card animate-in" style="border-left-color:#666">
+<div class="review-card" style="border-left-color:#666">
 <h3>🚙 Smittybilt G.E.A.R. Seat Covers</h3>
 <div class="stars">★★★☆☆ <span style="color:#999;font-size:.85rem">3.2/5</span></div>
-<p>The most affordable MOLLE-compatible option but uses thinner 600D polyester that showed wear in our 3-month test. Universal fit means gaps and bunching. No airbag compatibility certification.</p>
+<p>The most affordable MOLLE-compatible option but uses thinner 600D polyester. Universal fit means gaps and bunching. Airbag compatibility information varies by application.</p>
 <p style="color:#999;font-size:.85rem"><strong style="color:#ccc">Best for:</strong> Budget builds where MOLLE storage matters more than long-term durability.</p>
 <div class="btn-row">
 <a href="https://www.amazon.com/s?k=Smittybilt+GEAR+seat+cover+Jeep+Wrangler&tag=brazenprodu01-20" target="_blank" class="buy-btn btn-amazon">Check Price on Amazon</a>
 </div>
 </div>
 
-<div class="content-block animate-in"><h2>TJ &amp; LJ (1997–2006): Where It All Started</h2><p style="color:#bbb">The TJ (1997–2006) and its long-wheelbase sibling the LJ (Unlimited) are still some of the most popular trail rigs out there. Bartact makes custom-fit tactical covers for both the 1997–2002 TJ and the 2003–2006 TJ/LJ, with the same 1000D Cordura and double-stitched construction as their newer covers. If you're still wheeling a TJ, these are worth every penny — finding quality covers for older Wranglers is getting harder every year.</p><div class="btn-row"><a href="https://bartact.com/collections/jeep-wrangler-seat-covers" target="_blank" class="buy-btn btn-bartact">Shop TJ/LJ Covers at Bartact</a></div></div>
-<div class="content-block animate-in"><h2>JK vs JL: What Changes for Seat Covers?</h2><p style="color:#bbb">The JK (2007–2018) and JL (2018+) Wranglers have different seat mounting points and airbag locations. Custom-fit covers like Bartact have unique patterns for each generation. Universal covers often miss the JL airbag deployment zone — a safety risk.</p></div>
+<div class="content-block"><h2>TJ &amp; LJ (1997–2006): Where It All Started</h2><p style="color:#bbb">The TJ (1997–2006) and its long-wheelbase sibling the LJ (Unlimited) are still some of the most popular trail rigs out there. Bartact makes custom-fit tactical covers for both the 1997–2002 TJ and the 2003–2006 TJ/LJ, with the same 1000D Cordura construction as their newer covers. If you're still wheeling a TJ, these are worth a look — finding quality covers for older Wranglers is getting harder every year.</p><div class="btn-row"><a href="https://bartact.com/collections/jeep-wrangler-seat-covers" target="_blank" class="buy-btn btn-bartact">Shop TJ/LJ Covers at Bartact</a></div></div>
+<div class="content-block"><h2>JK vs JL: What Changes for Seat Covers?</h2><p style="color:#bbb">The JK (2007–2018) and JL (2018+) Wranglers have different seat mounting points and airbag locations. Custom-fit covers like Bartact have unique patterns for each generation. Universal covers often miss key fitment details on newer seats.</p></div>
 
-<div id="comparison" class="content-block animate-in">
+<div id="comparison" class="content-block">
 <h2>Quick Comparison — Jeep Wrangler Seat Covers</h2>
 <div class="table-wrap">
 <table>
@@ -85,7 +84,7 @@ footer{background:#111;padding:50px 20px 24px;margin-top:60px;border-top:1px sol
 </div>
 </div>
 
-<div class="our-take animate-in">
+<div class="our-take">
 <h2>Our Take: Jeep Wrangler Seat Covers</h2>
 <p><strong>Bartact is the obvious choice for the Jeep Wrangler.</strong> The custom fit, mil-spec materials, and MOLLE integration put it in a class of its own. Coverking is a decent runner-up if you don't need MOLLE, but the material quality gap is noticeable side-by-side.</p>
 <p>Skip the universal-fit options unless you're on a tight budget. The fitment difference between custom and universal is massive, especially on vehicles with complex seat shapes.</p>
@@ -95,12 +94,12 @@ footer{background:#111;padding:50px 20px 24px;margin-top:60px;border-top:1px sol
 
 <footer>
 <div class="footer-grid">
-<div class="footer-col"><h4>TacticalSeats</h4><p style="color:#999;font-size:.85rem">Independent tactical seat cover reviews. We test everything ourselves.</p></div>
+<div class="footer-col"><h4>TacticalSeats</h4><p style="color:#999;font-size:.85rem">Independent tactical seat cover reviews.</p></div>
 <div class="footer-col"><h4>Vehicle Reviews</h4><ul><li><a href="jeep-wrangler-seat-covers.html">Jeep Wrangler</a></li><li><a href="jeep-gladiator-seat-covers.html">Jeep Gladiator</a></li><li><a href="toyota-tacoma-seat-covers.html">Toyota Tacoma</a></li><li><a href="toyota-4runner-seat-covers.html">Toyota 4Runner</a></li><li><a href="ford-bronco-seat-covers.html">Ford Bronco</a></li></ul></div>
 <div class="footer-col"><h4>Network</h4><ul><li><a href="https://tacticalseatcovers.com">TacticalSeatCovers</a></li><li><a href="https://bestoffroadbrands.com">Best Off-Road Brands</a></li><li><a href="https://tacomaseats.com">TacomaSeats</a></li></ul></div>
 </div>
 <div class="affiliate-disc"><strong>Affiliate Disclosure:</strong> TacticalSeats.com participates in affiliate programs. We may earn commissions from qualifying purchases. All opinions are our own.</div>
 <div class="footer-bottom">© 2026 TacticalSeats.com — All rights reserved.</div>
 </footer>
-<script>const obs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:0.1});document.querySelectorAll('.animate-in').forEach(el=>obs.observe(el));</script>
+
 </body></html>
