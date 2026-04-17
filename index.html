@@ -101,6 +101,7 @@ footer{background:#111;padding:50px 20px 24px;margin-top:60px;border-top:1px sol
 nav ul{display:none}.cards{grid-template-columns:1fr}
 .footer-grid{grid-template-columns:1fr 1fr}
 .top-pick .btn-row{flex-direction:column}
+#ymm-search div[style*="grid-template-columns"]{ grid-template-columns:1fr !important }
 }
 </style>
 </head>
@@ -142,6 +143,48 @@ nav ul{display:none}.cards{grid-template-columns:1fr}
 
 </div>
 </section>
+
+<section class="section" id="ymm-search">
+<h2 class="section-title">Find Covers for Your Vehicle</h2>
+<p class="section-sub">Select your year, make, and model to find the best tactical seat covers</p>
+<div style="max-width:700px;margin:0 auto;background:#252525;border-radius:10px;padding:30px;border:1px solid #333">
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px">
+<select id="ymm-year" style="padding:12px;border-radius:6px;border:1px solid #444;background:#1a1a1a;color:#e0e0e0;font-size:1rem;font-family:Inter,sans-serif"><option value="">Year</option></select>
+<select id="ymm-make" disabled style="padding:12px;border-radius:6px;border:1px solid #444;background:#1a1a1a;color:#e0e0e0;font-size:1rem;font-family:Inter,sans-serif"><option value="">Make</option></select>
+<select id="ymm-model" disabled style="padding:12px;border-radius:6px;border:1px solid #444;background:#1a1a1a;color:#e0e0e0;font-size:1rem;font-family:Inter,sans-serif"><option value="">Model</option></select>
+</div>
+<button id="ymm-btn" disabled style="margin-top:16px;width:100%;padding:14px;background:#E8600A;color:#fff;border:none;border-radius:6px;font-size:1.05rem;font-weight:600;cursor:pointer;font-family:Inter,sans-serif;opacity:.5">Find Covers</button>
+<div id="ymm-result" style="margin-top:20px"></div>
+</div>
+</section>
+
+<script>
+(function(){
+const vehicles={"Jeep":{"Wrangler":[1997,2026],"Gladiator":[2020,2026],"Cherokee":[2014,2026],"Grand Cherokee":[2011,2026],"Compass":[2017,2026],"Renegade":[2015,2026]},"Toyota":{"Tacoma":[2005,2026],"4Runner":[2010,2026],"Tundra":[2007,2026],"RAV4":[2013,2026],"Highlander":[2014,2026],"Corolla":[2014,2026],"Camry":[2012,2026]},"Ford":{"Bronco":[2021,2026],"Bronco Sport":[2021,2026],"F-150":[2009,2026],"F-250/F-350":[2011,2026],"Ranger":[2019,2026],"Explorer":[2011,2026],"Escape":[2013,2026],"Maverick":[2022,2026]},"Chevrolet":{"Silverado 1500":[2014,2026],"Colorado":[2015,2026],"Tahoe":[2015,2026],"Suburban":[2015,2026],"Equinox":[2018,2026],"Traverse":[2018,2026]},"GMC":{"Sierra 1500":[2014,2026],"Canyon":[2015,2026],"Yukon":[2015,2026]},"RAM":{"1500":[2009,2026],"2500/3500":[2010,2026]},"Honda":{"Civic":[2016,2026],"CR-V":[2012,2026],"Accord":[2013,2026],"Pilot":[2016,2026],"HR-V":[2016,2026],"Ridgeline":[2017,2026]},"Subaru":{"Outback":[2015,2026],"Forester":[2014,2026],"Crosstrek":[2016,2026],"WRX":[2015,2026]},"Nissan":{"Frontier":[2005,2026],"Titan":[2016,2026],"Pathfinder":[2013,2026],"Rogue":[2014,2026]},"Hyundai":{"Tucson":[2016,2026],"Santa Fe":[2013,2026],"Palisade":[2020,2026]},"Kia":{"Telluride":[2020,2026],"Sportage":[2017,2026],"Sorento":[2016,2026]}};
+const bartact={"Jeep":{"Wrangler":{minY:1997,maxY:2026,url:"https://bartact.com/collections/jeep-wrangler-seat-covers"},"Gladiator":{minY:2020,maxY:2026,url:"https://bartact.com/collections/jeep-gladiator-seat-covers-1"}},"Toyota":{"Tacoma":{minY:2005,maxY:2023,url:"https://bartact.com/collections/toyota-tacoma-seat-covers"},"4Runner":{minY:2010,maxY:2024,url:"https://bartact.com/collections/toyota-4runner-seat-covers"}},"Ford":{"Bronco":{minY:2021,maxY:2026,url:"https://bartact.com/collections/ford-bronco-seat-covers"}}};
+const $y=document.getElementById('ymm-year'),$m=document.getElementById('ymm-make'),$o=document.getElementById('ymm-model'),$b=document.getElementById('ymm-btn'),$r=document.getElementById('ymm-result');
+// Collect all years
+const allYears=new Set();for(const mk in vehicles)for(const mo in vehicles[mk]){const r=vehicles[mk][mo];for(let y=r[1];y>=r[0];y--)allYears.add(y);}
+Array.from(allYears).sort((a,b)=>b-a).forEach(y=>{const o=document.createElement('option');o.value=y;o.textContent=y;$y.appendChild(o);});
+$y.onchange=function(){$m.innerHTML='<option value="">Make</option>';$o.innerHTML='<option value="">Model</option>';$o.disabled=true;$b.disabled=true;$b.style.opacity='.5';$r.innerHTML='';if(!this.value){$m.disabled=true;return;}
+$m.disabled=false;const yr=+this.value;for(const mk of Object.keys(vehicles).sort()){let has=false;for(const mo in vehicles[mk]){const r=vehicles[mk][mo];if(yr>=r[0]&&yr<=r[1]){has=true;break;}}if(has){const o=document.createElement('option');o.value=mk;o.textContent=mk;$m.appendChild(o);}}};
+$m.onchange=function(){$o.innerHTML='<option value="">Model</option>';$b.disabled=true;$b.style.opacity='.5';$r.innerHTML='';if(!this.value){$o.disabled=true;return;}
+$o.disabled=false;const yr=+$y.value,mk=this.value;for(const mo of Object.keys(vehicles[mk]).sort()){const r=vehicles[mk][mo];if(yr>=r[0]&&yr<=r[1]){const o=document.createElement('option');o.value=mo;o.textContent=mo;$o.appendChild(o);}}};
+$o.onchange=function(){$b.disabled=!this.value;$b.style.opacity=this.value?'1':'.5';$r.innerHTML='';};
+$b.onclick=function(){const yr=$y.value,mk=$m.value,mo=$o.value;if(!yr||!mk||!mo)return;
+const amzQ=encodeURIComponent(yr+' '+mk+' '+mo+' tactical seat covers');
+const amzUrl='https://www.amazon.com/s?k='+amzQ+'&tag=brazenprodu01-20';
+let html='';
+const b=bartact[mk]&&bartact[mk][mo];if(b&&+yr>=b.minY&&+yr<=b.maxY){
+html+='<div style="background:#1a1a1a;border:2px solid #E8600A;border-radius:8px;padding:20px;margin-bottom:12px"><div style="font-size:1.15rem;font-weight:600;color:#fff;margin-bottom:12px">\uD83C\uDFC6 Bartact makes custom-fit tactical covers for your '+yr+' '+mk+' '+mo+'!</div><a href="'+b.url+'" target="_blank" rel="noopener" style="display:inline-block;background:#E8600A;color:#fff;padding:12px 24px;border-radius:6px;font-weight:600;text-decoration:none;margin-right:10px">Shop at Bartact</a></div>';
+html+='<div style="background:#1a1a1a;border-radius:8px;padding:16px;border:1px solid #333"><div style="color:#999;margin-bottom:8px">Also available on Amazon</div><a href="'+amzUrl+'" target="_blank" rel="noopener" style="display:inline-block;background:#F0C14B;color:#111;padding:10px 20px;border-radius:6px;font-weight:600;text-decoration:none">Search Amazon ↗</a></div>';
+}else{
+html+='<div style="background:#1a1a1a;border-radius:8px;padding:20px;border:1px solid #333"><div style="color:#fff;font-weight:600;margin-bottom:12px">Tactical seat covers for your '+yr+' '+mk+' '+mo+'</div><a href="'+amzUrl+'" target="_blank" rel="noopener" style="display:inline-block;background:#F0C14B;color:#111;padding:12px 24px;border-radius:6px;font-weight:600;text-decoration:none">Shop on Amazon ↗</a></div>';}
+$r.innerHTML=html;};
+$b.onmouseover=function(){if(!this.disabled)this.style.background='#cf5509';};
+$b.onmouseout=function(){this.style.background='#E8600A';};
+})();
+</script>
 
 <section class="section">
 <h2 class="section-title">Covers by Vehicle</h2>
