@@ -15,10 +15,6 @@ h1,h2,h3,h4{font-family:'Barlow Condensed',sans-serif;letter-spacing:.5px}
 a{color:#E8600A;text-decoration:none}a:hover{text-decoration:underline}
 img{max-width:100%;height:auto}
 
-/* Animations */
-.animate-in{opacity:1;transform:translateY(0);transition:opacity .6s ease,transform .6s ease}
-.animate-in.pending{opacity:0;transform:translateY(30px)}
-.animate-in.visible{opacity:1;transform:translateY(0)}
 .card{transition:transform .3s ease,box-shadow .3s ease}
 .card:hover{transform:translateY(-6px);box-shadow:0 12px 40px rgba(0,0,0,.3)}
 .buy-btn{transition:transform .3s ease,box-shadow .3s ease}
@@ -133,14 +129,14 @@ nav ul{display:none}.cards{grid-template-columns:1fr}
 </section>
 
 <section class="section" id="top-pick">
-<div class="top-pick animate-in pending" style="display:block">
+<div class="top-pick" style="display:block">
 <div>
 <span class="pick-badge">🏆 #1 PICK — EDITOR'S CHOICE</span>
 <h3>Bartact Tactical Seat Covers</h3>
 <div class="stars">★★★★★ <span style="color:#999;font-size:.85rem">4.9/5 — Best Overall</span></div>
 <p>Mil-spec 1000D Cordura with MOLLE panels, SRS airbag compatible, and made in the USA. Bartact blew everything else out of the water in our durability and fitment tests. Custom-fit for each vehicle — no "universal" nonsense.</p>
 <div class="btn-row">
-<a href="jeep-wrangler-seat-covers.html" class="buy-btn btn-review">Read Full Review</a>
+<a href="jeep-wrangler-seat-covers.html" class="buy-btn btn-bartact" style="background:transparent;border:2px solid #E8600A;color:#E8600A">Read Full Review</a>
 </div>
 </div>
 
@@ -151,63 +147,63 @@ nav ul{display:none}.cards{grid-template-columns:1fr}
 <h2 class="section-title">Covers by Vehicle</h2>
 <p class="section-sub">Click your vehicle for custom-fit recommendations and reviews</p>
 <div class="cards">
-<div class="card animate-in pending">
+<div class="card">
 <div class="card-body">
 <div style="margin-bottom:10px"><img src="images/jeep-wrangler.jpg" alt="Jeep Wrangler JL on rocky trail" style="width:100%;border-radius:6px;max-height:200px;object-fit:cover"></div>
 <h3>Jeep Wrangler JK/JL</h3>
 <div class="stars">★★★★★</div>
 <p>The most popular platform for tactical covers. Bartact dominates here with custom-fit patterns for every JK and JL configuration.</p>
 <div class="btn-row">
-<a href="jeep-wrangler-seat-covers.html" class="buy-btn btn-review">Read Review</a>
-<a href="https://bartact.com/collections/jeep-wrangler-seat-covers" target="_blank" class="buy-btn btn-bartact">Shop Covers</a>
+<a href="jeep-wrangler-seat-covers.html" class="buy-btn btn-bartact" style="background:transparent;border:2px solid #E8600A;color:#E8600A">Read Review</a>
+<a href="jeep-wrangler-seat-covers.html" class="buy-btn btn-bartact">Shop Covers</a>
 </div>
 </div>
 </div>
-<div class="card animate-in pending">
+<div class="card">
 <div class="card-body">
 <div style="margin-bottom:10px"><img src="images/jeep-gladiator.jpg" alt="Jeep Gladiator on dirt trail" style="width:100%;border-radius:6px;max-height:200px;object-fit:cover"></div>
 <h3>Jeep Gladiator JT</h3>
 <div class="stars">★★★★★</div>
 <p>Same mil-spec quality, custom-fit for the Gladiator's unique dimensions. MOLLE-ready with full SRS compatibility.</p>
 <div class="btn-row">
-<a href="jeep-gladiator-seat-covers.html" class="buy-btn btn-review">Read Review</a>
-<a href="https://bartact.com/collections/jeep-gladiator-seat-covers" target="_blank" class="buy-btn btn-bartact">Shop Covers</a>
+<a href="jeep-gladiator-seat-covers.html" class="buy-btn btn-bartact" style="background:transparent;border:2px solid #E8600A;color:#E8600A">Read Review</a>
+<a href="jeep-gladiator-seat-covers.html" class="buy-btn btn-bartact">Shop Covers</a>
 </div>
 </div>
 </div>
-<div class="card animate-in pending">
+<div class="card">
 <div class="card-body">
 <div style="margin-bottom:10px"><img src="images/toyota-tacoma.jpg" alt="Toyota Tacoma TRD on mountain trail" style="width:100%;border-radius:6px;max-height:200px;object-fit:cover"></div>
 <h3>Toyota Tacoma</h3>
 <div class="stars">★★★★★</div>
 <p>Purpose-built for 2nd and 3rd gen Tacomas. The rugged fabric holds up to trail abuse while looking sharp on the commute.</p>
 <div class="btn-row">
-<a href="toyota-tacoma-seat-covers.html" class="buy-btn btn-review">Read Review</a>
-<a href="https://bartact.com/collections/toyota-tacoma-seat-covers" target="_blank" class="buy-btn btn-bartact">Shop Covers</a>
+<a href="toyota-tacoma-seat-covers.html" class="buy-btn btn-bartact" style="background:transparent;border:2px solid #E8600A;color:#E8600A">Read Review</a>
+<a href="toyota-tacoma-seat-covers.html" class="buy-btn btn-bartact">Shop Covers</a>
 </div>
 </div>
 </div>
-<div class="card animate-in pending">
+<div class="card">
 <div class="card-body">
 <div style="margin-bottom:10px"><img src="images/toyota-4runner.jpg" alt="Toyota 4Runner TRD Pro" style="width:100%;border-radius:6px;max-height:200px;object-fit:cover"></div>
 <h3>Toyota 4Runner</h3>
 <div class="stars">★★★★☆</div>
 <p>Full coverage options for 5th gen 4Runners. Great for overlanding rigs that need seats that can take a beating.</p>
 <div class="btn-row">
-<a href="toyota-4runner-seat-covers.html" class="buy-btn btn-review">Read Review</a>
-<a href="https://bartact.com/collections/toyota-4runner-seat-covers" target="_blank" class="buy-btn btn-bartact">Shop Covers</a>
+<a href="toyota-4runner-seat-covers.html" class="buy-btn btn-bartact" style="background:transparent;border:2px solid #E8600A;color:#E8600A">Read Review</a>
+<a href="toyota-4runner-seat-covers.html" class="buy-btn btn-bartact">Shop Covers</a>
 </div>
 </div>
 </div>
-<div class="card animate-in pending">
+<div class="card">
 <div class="card-body">
 <div style="margin-bottom:10px"><img src="images/ford-bronco.jpg" alt="Ford Bronco on desert trail" style="width:100%;border-radius:6px;max-height:200px;object-fit:cover"></div>
 <h3>Ford Bronco</h3>
 <div class="stars">★★★★★</div>
 <p>New platform, but Bartact already has full custom-fit coverage for 2-door and 4-door Broncos with MOLLE integration.</p>
 <div class="btn-row">
-<a href="ford-bronco-seat-covers.html" class="buy-btn btn-review">Read Review</a>
-<a href="https://bartact.com/collections/ford-bronco-seat-covers" target="_blank" class="buy-btn btn-bartact">Shop Covers</a>
+<a href="ford-bronco-seat-covers.html" class="buy-btn btn-bartact" style="background:transparent;border:2px solid #E8600A;color:#E8600A">Read Review</a>
+<a href="ford-bronco-seat-covers.html" class="buy-btn btn-bartact">Shop Covers</a>
 </div>
 </div>
 </div>
@@ -219,10 +215,10 @@ nav ul{display:none}.cards{grid-template-columns:1fr}
 <p class="section-sub">Detailed pros &amp; cons from our hands-on testing</p>
 
 <!-- #1 Bartact -->
-<div style="background:linear-gradient(135deg,#2a2a1e,#1e2a1e);border:2px solid #E8600A;border-radius:10px;padding:28px;margin-bottom:24px" class="animate-in pending">
+<div style="background:linear-gradient(135deg,#2a2a1e,#1e2a1e);border:2px solid #E8600A;border-radius:10px;padding:28px;margin-bottom:24px">
 <span class="pick-badge" style="position:static;margin-bottom:12px;display:inline-block">🏆 #1 PICK — EDITOR'S CHOICE</span>
 <div style="display:grid;grid-template-columns:180px 1fr;gap:20px;align-items:start">
-<div><img src="images/bartact-product.png" alt="Bartact Mil-Spec tactical seat covers" style="width:100%;border-radius:8px"></div>
+<div><img src="images/bartact-product.jpg" alt="Bartact Mil-Spec tactical seat covers" style="width:100%;border-radius:8px"></div>
 <div>
 <h3 style="font-size:1.4rem;color:#fff">Bartact Mil-Spec Tactical Seat Covers</h3>
 <div class="stars">★★★★★ <span style="color:#999;font-size:.85rem">4.9/5</span></div>
@@ -231,13 +227,13 @@ nav ul{display:none}.cards{grid-template-columns:1fr}
 <div><h4 style="color:#6fcf57;font-size:.85rem;margin-bottom:6px">✅ Pros</h4><ul style="list-style:none;color:#bbb"><li>• 1000D mil-spec Cordura</li><li>• Real MOLLE — fits standard gear</li><li>• SRS airbag certified</li><li>• Berry Amendment compliant</li><li>• Made in USA — lifetime stitching warranty</li><li>• 14 color combinations</li></ul></div>
 <div><h4 style="color:#e55;font-size:.85rem;margin-bottom:6px">❌ Cons</h4><ul style="list-style:none;color:#bbb"><li>• Higher price than imports</li><li>• Limited vehicle coverage vs universal brands</li><li>• Not sold on Amazon</li></ul></div>
 </div>
-<div class="btn-row"><a href="https://bartact.com/collections/jeep-wrangler-seat-covers" target="_blank" class="buy-btn btn-amazon" style="background:#E8600A">Shop at Bartact</a><a href="jeep-wrangler-seat-covers.html" class="buy-btn btn-review">Read Full Review</a></div>
+<div class="btn-row"><a href="https://bartact.com/collections/jeep-wrangler-seat-covers" target="_blank" class="buy-btn btn-bartact">Shop at Bartact</a><a href="jeep-wrangler-seat-covers.html" class="buy-btn btn-bartact" style="background:transparent;border:2px solid #E8600A;color:#E8600A">Read Full Review</a></div>
 </div>
 </div>
 </div>
 
 <!-- #2 Coverking -->
-<div style="background:#252525;border-radius:10px;padding:28px;margin-bottom:24px;border-left:4px solid #E8600A" class="animate-in pending">
+<div style="background:#252525;border-radius:10px;padding:28px;margin-bottom:24px;border-left:4px solid #E8600A">
 <div style="display:grid;grid-template-columns:160px 1fr;gap:16px;align-items:start">
 <div><img src="images/coverking-ballistic.jpg" alt="Coverking Ballistic seat covers" style="width:100%;border-radius:8px"></div>
 <div>
@@ -248,13 +244,13 @@ nav ul{display:none}.cards{grid-template-columns:1fr}
 <div><h4 style="color:#6fcf57;font-size:.85rem;margin-bottom:6px">✅ Pros</h4><ul style="list-style:none;color:#bbb"><li>• Custom fit per vehicle</li><li>• Airbag compatible</li><li>• Good color selection</li><li>• Competitive pricing</li></ul></div>
 <div><h4 style="color:#e55;font-size:.85rem;margin-bottom:6px">❌ Cons</h4><ul style="list-style:none;color:#bbb"><li>• Ballistic nylon — thinner than Cordura</li><li>• No real MOLLE (sewn pouches)</li><li>• Made overseas</li><li>• No Berry compliance</li></ul></div>
 </div>
-<div class="btn-row"><a href="https://www.amazon.com/s?k=Coverking+tactical+seat+covers&tag=brazenprodu01-20" target="_blank" class="buy-btn btn-amazon">Check Price on Amazon</a><a href="#comparison" class="buy-btn btn-review">Read Full Review</a></div>
+<div class="btn-row"><a href="https://www.amazon.com/s?k=Coverking+tactical+seat+covers&tag=brazenprodu01-20" target="_blank" class="buy-btn btn-amazon">Check Price on Amazon</a><a href="#comparison" class="buy-btn btn-bartact" style="background:transparent;border:2px solid #E8600A;color:#E8600A">Compare</a></div>
 </div>
 </div>
 </div>
 
 <!-- #3 Smittybilt -->
-<div style="background:#252525;border-radius:10px;padding:28px;margin-bottom:24px;border-left:4px solid #E8600A" class="animate-in pending">
+<div style="background:#252525;border-radius:10px;padding:28px;margin-bottom:24px;border-left:4px solid #E8600A">
 <div style="display:grid;grid-template-columns:160px 1fr;gap:16px;align-items:start">
 <div><img src="images/smittybilt-gear.jpg" alt="Smittybilt GEAR seat covers" style="width:100%;border-radius:8px"></div>
 <div>
@@ -265,13 +261,13 @@ nav ul{display:none}.cards{grid-template-columns:1fr}
 <div><h4 style="color:#6fcf57;font-size:.85rem;margin-bottom:6px">✅ Pros</h4><ul style="list-style:none;color:#bbb"><li>• Great storage pocket system</li><li>• Very affordable</li><li>• Wide Jeep fitment</li><li>• Easy to install</li></ul></div>
 <div><h4 style="color:#e55;font-size:.85rem;margin-bottom:6px">❌ Cons</h4><ul style="list-style:none;color:#bbb"><li>• 600D polyester — fades in sun</li><li>• Not real MOLLE</li><li>• No airbag certification</li><li>• Universal fit — loose on some seats</li></ul></div>
 </div>
-<div class="btn-row"><a href="https://www.amazon.com/s?k=Smittybilt+GEAR+seat+covers+MOLLE&tag=brazenprodu01-20" target="_blank" class="buy-btn btn-amazon">Check Price on Amazon</a><a href="#comparison" class="buy-btn btn-review">Read Full Review</a></div>
+<div class="btn-row"><a href="https://www.amazon.com/s?k=Smittybilt+GEAR+seat+covers+MOLLE&tag=brazenprodu01-20" target="_blank" class="buy-btn btn-amazon">Check Price on Amazon</a><a href="#comparison" class="buy-btn btn-bartact" style="background:transparent;border:2px solid #E8600A;color:#E8600A">Compare</a></div>
 </div>
 </div>
 </div>
 
 <!-- #4 Razorback -->
-<div style="background:#252525;border-radius:10px;padding:28px;margin-bottom:24px;border-left:4px solid #E8600A" class="animate-in pending">
+<div style="background:#252525;border-radius:10px;padding:28px;margin-bottom:24px;border-left:4px solid #E8600A">
 <div style="display:grid;grid-template-columns:160px 1fr;gap:16px;align-items:start">
 <div><img src="images/razorback-tactical.jpg" alt="Razorback tactical seat covers" style="width:100%;border-radius:8px"></div>
 <div>
@@ -282,13 +278,13 @@ nav ul{display:none}.cards{grid-template-columns:1fr}
 <div><h4 style="color:#6fcf57;font-size:.85rem;margin-bottom:6px">✅ Pros</h4><ul style="list-style:none;color:#bbb"><li>• MOLLE-compatible panels</li><li>• Mid-range pricing</li><li>• 900D polyester (heavier than most)</li></ul></div>
 <div><h4 style="color:#e55;font-size:.85rem;margin-bottom:6px">❌ Cons</h4><ul style="list-style:none;color:#bbb"><li>• Not true Cordura</li><li>• Limited vehicle fitment</li><li>• Newer brand — less track record</li><li>• Not made in USA</li></ul></div>
 </div>
-<div class="btn-row"><a href="https://www.amazon.com/s?k=tactical+MOLLE+seat+covers&tag=brazenprodu01-20" target="_blank" class="buy-btn btn-amazon">Check Price on Amazon</a><a href="#comparison" class="buy-btn btn-review">Read Full Review</a></div>
+<div class="btn-row"><a href="https://www.amazon.com/s?k=tactical+MOLLE+seat+covers&tag=brazenprodu01-20" target="_blank" class="buy-btn btn-amazon">Check Price on Amazon</a><a href="#comparison" class="buy-btn btn-bartact" style="background:transparent;border:2px solid #E8600A;color:#E8600A">Compare</a></div>
 </div>
 </div>
 </div>
 
 <!-- #5 Diver Down -->
-<div style="background:#252525;border-radius:10px;padding:28px;margin-bottom:24px;border-left:4px solid #E8600A" class="animate-in pending">
+<div style="background:#252525;border-radius:10px;padding:28px;margin-bottom:24px;border-left:4px solid #E8600A">
 <div style="display:grid;grid-template-columns:160px 1fr;gap:16px;align-items:start">
 <div><img src="images/diver-down.jpg" alt="Diver Down neoprene seat covers" style="width:100%;border-radius:8px"></div>
 <div>
@@ -299,7 +295,7 @@ nav ul{display:none}.cards{grid-template-columns:1fr}
 <div><h4 style="color:#6fcf57;font-size:.85rem;margin-bottom:6px">✅ Pros</h4><ul style="list-style:none;color:#bbb"><li>• Excellent water resistance</li><li>• Comfortable neoprene feel</li><li>• Good Jeep fitment</li><li>• Affordable</li></ul></div>
 <div><h4 style="color:#e55;font-size:.85rem;margin-bottom:6px">❌ Cons</h4><ul style="list-style:none;color:#bbb"><li>• No MOLLE or tactical features</li><li>• Neoprene traps heat in summer</li><li>• Less abrasion-resistant than Cordura</li><li>• Limited color options</li></ul></div>
 </div>
-<div class="btn-row"><a href="https://www.amazon.com/s?k=Diver+Down+neoprene+seat+covers+Jeep&tag=brazenprodu01-20" target="_blank" class="buy-btn btn-amazon">Check Price on Amazon</a><a href="#comparison" class="buy-btn btn-review">Read Full Review</a></div>
+<div class="btn-row"><a href="https://www.amazon.com/s?k=Diver+Down+neoprene+seat+covers+Jeep&tag=brazenprodu01-20" target="_blank" class="buy-btn btn-amazon">Check Price on Amazon</a><a href="#comparison" class="buy-btn btn-bartact" style="background:transparent;border:2px solid #E8600A;color:#E8600A">Compare</a></div>
 </div>
 </div>
 </div>
@@ -308,7 +304,7 @@ nav ul{display:none}.cards{grid-template-columns:1fr}
 <section class="section" id="comparison">
 <h2 class="section-title">Head-to-Head Comparison</h2>
 <p class="section-sub">Every brand tested on the same criteria</p>
-<div class="table-wrap animate-in pending">
+<div class="table-wrap">
 <table>
 <thead><tr><th>Brand</th><th>Price</th><th>Material</th><th>MOLLE</th><th>Airbag Safe</th><th>Made in USA</th><th>Berry Compliant</th><th>Rating</th></tr></thead>
 <tbody>
@@ -323,7 +319,7 @@ nav ul{display:none}.cards{grid-template-columns:1fr}
 </section>
 
 <section class="section">
-<div class="our-take animate-in pending">
+<div class="our-take">
 <h2>🎯 Our Take</h2>
 <p><strong>Bartact is the clear winner.</strong> No other brand combines mil-spec 1000D Cordura, full MOLLE integration, SRS airbag compatibility, AND made-in-USA quality at this price point. TigerTough comes close on materials but lacks MOLLE and costs significantly more.</p>
 <p>If you're building a rig — whether it's a Wrangler, Gladiator, Tacoma, or Bronco — Bartact should be your first stop. The custom fit is noticeably better than anything we tested from Coverking or Smittybilt.</p>
@@ -388,9 +384,6 @@ nav ul{display:none}.cards{grid-template-columns:1fr}
 <a href="https://whatarebest.com" style="color:#666;margin:0 8px">What Are Best</a> · <a href="https://bestseatcover.com" style="color:#666;margin:0 8px">Best Seat Covers</a> · <a href="https://jeepseatcover.com" style="color:#666;margin:0 8px">Jeep Seat Covers</a> · <a href="https://bestbroncoaccessories.com" style="color:#666;margin:0 8px">Bronco Accessories</a> · <a href="https://besttruckaccessories.com" style="color:#666;margin:0 8px">Truck Accessories</a> · <a href="https://besttonneaucovers.com" style="color:#666;margin:0 8px">Tonneau Covers</a> · <a href="https://bestcordlesstools.com" style="color:#666;margin:0 8px">Cordless Tools</a> · <a href="https://bestfirestick.com" style="color:#666;margin:0 8px">Best Firestick</a> · <a href="https://limitstraps.com" style="color:#666;margin:0 8px">Limit Straps</a>
 </div>
 
-<script>
-const obs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:0.1});
-document.querySelectorAll('.animate-in').forEach(el=>obs.observe(el));
-</script>
+
 </body>
 </html>
