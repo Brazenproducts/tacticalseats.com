@@ -178,10 +178,7 @@ $o.disabled=false;const yr=+$y.value,mk=this.value;for(const mo of Object.keys(v
 $o.onchange=function(){$b.disabled=!this.value;$b.style.opacity=this.value?'1':'.5';$r.innerHTML='';};
 $b.onclick=function(){const yr=$y.value,mk=$m.value,mo=$o.value;if(!yr||!mk||!mo)return;
 const amzQ=encodeURIComponent(yr+' '+mk+' '+mo+' tactical seat covers');
-const amzUrl='https://www.amazon.com/s?k='+amzQ+'&tag=brazenprodu01-20';
-let html='';
-const b=bartact[mk]&&bartact[mk][mo];if(b&&+yr>=b.minY&&+yr<=b.maxY){
-html+='<div style="background:#1a1a1a;border:2px solid #E8600A;border-radius:8px;padding:20px;margin-bottom:12px"><div style="font-size:1.15rem;font-weight:600;color:#fff;margin-bottom:12px">\uD83C\uDFC6 Bartact makes custom-fit tactical covers for your '+yr+' '+mk+' '+mo+'!</div><a href="'+b.url+'" target="_blank" rel="noopener" style="display:inline-block;background:#E8600A;color:#fff;padding:12px 24px;border-radius:6px;font-weight:600;text-decoration:none;margin-right:10px">Shop at Bartact</a></div>';
+const amzUrl='#"background:#1a1a1a;border:2px solid #E8600A;border-radius:8px;padding:20px;margin-bottom:12px"><div style="font-size:1.15rem;font-weight:600;color:#fff;margin-bottom:12px">\uD83C\uDFC6 Bartact makes custom-fit tactical covers for your '+yr+' '+mk+' '+mo+'!</div><a href="'+b.url+'" target="_blank" rel="noopener" style="display:inline-block;background:#E8600A;color:#fff;padding:12px 24px;border-radius:6px;font-weight:600;text-decoration:none;margin-right:10px">Shop at Bartact</a></div>';
 html+='<div style="background:#1a1a1a;border-radius:8px;padding:16px;border:1px solid #333"><div style="color:#999;margin-bottom:8px">Also available on Amazon</div><a href="'+amzUrl+'" target="_blank" rel="noopener" style="display:inline-block;background:#F0C14B;color:#111;padding:10px 20px;border-radius:6px;font-weight:600;text-decoration:none">Search Amazon ↗</a></div>';
 }else{
 html+='<div style="background:#1a1a1a;border-radius:8px;padding:20px;border:1px solid #333"><div style="color:#fff;font-weight:600;margin-bottom:12px">Tactical seat covers for your '+yr+' '+mk+' '+mo+'</div><a href="'+amzUrl+'" target="_blank" rel="noopener" style="display:inline-block;background:#F0C14B;color:#111;padding:12px 24px;border-radius:6px;font-weight:600;text-decoration:none">Shop on Amazon ↗</a></div>';}
