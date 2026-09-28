@@ -1,0 +1,31 @@
+TacticalSeats Blog Publishing Status
+====================================
+
+Post: "Why Berry Amendment Compliance Matters for Tactical Seat Covers"
+Date: September 17, 2026
+URL: /blog/berry-amendment-compliance-tactical-seat-covers.html
+
+✅ COMPLETED:
+- Blog post written (13,707 bytes)
+- Post card added to blog/index.html
+- Blog calendar updated (item #17 marked as published)
+- Changes committed locally (commit: 05feee5)
+
+⚠️ PENDING:
+- Git push to GitHub (authentication failed - invalid token)
+- IndexNow submission (requires API key not provided)
+
+ACTION REQUIRED:
+1. Provide valid GitHub token to complete push
+2. Provide IndexNow API key for search engine notification
+   OR manually submit: https://www.bing.com/webmasters/indexnow
+
+FILES MODIFIED:
+- blog/berry-amendment-compliance-tactical-seat-covers.html (NEW)
+- blog/index.html (UPDATED - added post card)
+
+LOCAL COMMIT:
+05feee5 Publish: Why Berry Amendment Compliance Matters for Tactical Seat Covers (Sept 17, 2026)
+
+NEXT QUEUED POST:
+#18: Best Seat Covers for Work Trucks
